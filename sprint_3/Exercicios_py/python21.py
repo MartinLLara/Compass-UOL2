@@ -43,13 +43,15 @@ pato.canto_pato
 pardal.voar
 pardal.canto_pardal
 """
+"""
 class Passaro:
    def _init_(self, nome):
        self.nome = nome
 
 
    def voar(self):
-       print(f'{self.nome} \nVoando...')
+       print(self.nome)
+       print('Voando...')
 
 
    def emitir_som(self):
@@ -74,9 +76,43 @@ class Pardal(Passaro):
       super()._init_(nome)
 
 
-pato = Pato(0)
+pato = Pato('Pato')
 pardal = Pardal('Pardal')
 
+
+pato.voar()
+pato.emitir_som()
+pato.pato_som()
+pardal.voar()
+pardal.emitir_som()
+pardal.pardal_som()"""
+class Passaro:
+    def __init__(self, nome):
+        self.nome = nome
+
+    def voar(self):
+        print(f'{self.nome} \nVoando...')
+
+    def emitir_som(self):
+        print(f'{self.nome} emitindo som...')
+
+    def pato_som(self):
+        print('Quack Quack')
+
+    def pardal_som(self):
+        print('Piu Piu')
+
+
+class Pato(Passaro):
+    pass
+
+
+class Pardal(Passaro):
+    pass
+
+
+pato = Pato("pato")
+pardal = Pardal("pardal")
 
 pato.voar()
 pato.emitir_som()

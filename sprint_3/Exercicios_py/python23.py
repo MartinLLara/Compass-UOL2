@@ -18,11 +18,11 @@ class Calculo:
         self.__Y = Y
     def sub(self):
         z = self.__X - self.__Y
-        print(f'Subtraindo: {self.__X}+{self.__Y} = {z}')
+        print(f'Subtraindo:{self.__X}-{self.__Y} = {z}')
     def som(self):
         u = self.__X + self.__Y
-        print(f'Somando: {self.__X}+{self.__Y} = {u}')
+        print(f'Somando:{self.__X}+{self.__Y} = {u}')
 
-cal=Calculo(4,5)
-cal.som()
-cal.sub()
+calculo=Calculo(4,5)
+calculo.som()
+calculo.sub()
