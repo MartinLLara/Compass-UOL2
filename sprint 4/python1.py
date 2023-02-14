@@ -1,0 +1,10 @@
+with open ("numbers.txt",'r') as numeros:
+    lista= list(numeros)
+    lista=list(map(lambda l: l.strip('\n'),lista))
+    lista= list(map(int,lista))
+    par = list(filter(lambda n : (n%2==0),lista))
+    maiorpar = list(sorted(par,reverse=True))
+    top5= list(maiorpar[:5])
+    print(top5)
+    soma=sum(top5)
+    print(soma)
